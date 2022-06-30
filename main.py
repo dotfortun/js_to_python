@@ -285,4 +285,20 @@ books_obj = list(
 # for book in books_obj:
 #     pprint(book.serialize())
 
+print("Any (T, F):", any([1==1, 1==0]))
+print("Any (F, F):", any([1==0, 1==0]))
+print("All (T, F):", all([1, 0]))
+print("All (T, T):", all([1, 1]))
 
+# DeMorgan's Law
+# not(not p or not q) == p and q
+
+for i in range(100):
+    if all([i % 3 == 0, i % 5 == 0]):
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
